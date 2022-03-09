@@ -11,13 +11,19 @@ export default function Register(){
     return(
         <View style={styles.container}>
             <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-                <Text style={styles.message}>Faça a sua conta</Text>
+                <Text style={styles.message}>Crie a sua conta</Text>
             </Animatable.View>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
+                {/*  */}
+                <Text style={styles.title}>Nome Completo</Text>
+                <TextInput
+                    placeholder='Digite o seu nome completo'
+                    style={styles.input}
+                />
                 <Text style={styles.title}>Email</Text>
                 <TextInput
-                    placeholder='Digite um email...'
+                    placeholder='Digite um email'
                     style={styles.input}
                 />
                 {/*  */}
@@ -27,7 +33,8 @@ export default function Register(){
                     style={styles.input}
                 />
                 {/*  */}
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button}
+                onPress={()=>navigation.navigate('SignIn')}>
                     <Text style={styles.buttonText}>Cadastrar</Text>
                 </TouchableOpacity>
 
